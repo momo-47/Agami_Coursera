@@ -9,17 +9,28 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file <stats.c> 
+ * @brief <implementation file that contains the code for calulating stats of 
+ * an array >
  *
- * <Add Extended Description Here>
+ * <The file contains an array of unsigned char dataset and "8" functions:
+ * ("main()", "print_statistics()", "print_array()","find_median()",
+ * "find_mean()","find_maximum()","find_minimum()","sort_array()")to calculate
+ * their statistics and print them>
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author <Mohamed Agami>
+ * @date <September,23,2020 >
  *
  */
 
 
+void print_statistics(int median, int mean, int maximum, int minimum);
+void print_array(unsigned char *test[], int SIZE);
+int find_median (unsigned char *test[], int SIZE);
+int find_mean (unsigned char *test[], int SIZE);
+int find_maximum (unsigned char *test[], int SIZE);
+int find_minimum (unsigned char *test[], int SIZE);
+void sort_array (unsigned char *test[], int SIZE);
 
 #include <stdio.h>
 #include "stats.h"
@@ -40,4 +51,5 @@ void main() {
 
 }
 
-/* Add other Implementation File Code Here */
+/* Add other Implementation File Code Here */ 
+
