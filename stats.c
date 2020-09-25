@@ -47,9 +47,79 @@ void main() {
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
   /* Other Variable Declarations Go Here */
+  int median, mean, maximum, minimum;
+
   /* Statistics and Printing Functions Go Here */
+  sort_array(&test,SIZE);
+  median= find_median(&test,SIZE);
+  mean= find_mean(&test,SIZE);
+  maximum= find_maximum(&test,SIZE);
+  minimum= find_minimum(&test,SIZE);
+  print_array(&test,SIZE);
+  print_statistics(median,mean,maximum,minimum);
 
 }
 
+
 /* Add other Implementation File Code Here */ 
+
+int find_mean (unsigned char *test[], int SIZE){
+	int sum;
+	for (int i=0; i<SIZE; i++){
+	sum+=*test[i];
+	}
+	return(sum/SIZE);
+}
+
+int find_maximum (unsigned char *test[], int SIZE){
+	int max= *test[0];
+	for (int i=0; i<SIZE; i++){
+	if (max<*test[i])	 max=*tset[i];
+	}
+	return(max);
+}
+
+int find_minimum (unsigned char *test[], int SIZE){
+        int min= *test[0];
+        for (int i=0; i<SIZE; i++){
+        if (min>*test[i])        min=*tset[i];
+	}
+        return(min);
+}
+
+void sort_array (unsigned char *test[], int SIZE){
+	int temp=*test[0];
+	for (int x=0;	x<SIZE;	x++){
+		for (int y=1;	y<SIZE-1;	y++){
+			if *test[x]<*test[y]{
+			temp=*test[x];
+			*test[x]=*test[y];
+			*test[y]=temp;
+			}
+		}
+	}
+}
+
+int find_median (unsigned char *test[], int SIZE){
+	if (SIZE%2==0)		median= (*test[SIZE/2]+ *test[(SIZE/2)+1])/2;
+	else median = *test[(SIZE+1)/2];
+	return median;
+}
+
+
+void print_array(unsigned char *test[], int SIZE){
+	printf("\nThe dataset:\n");
+	printf("{");
+	for(int i=0; i<SIZE; i++){
+	printf("%d\t",*test[i]);
+	}
+	printf("}");
+}
+
+void print_statistics(int median, int mean, int maximum, int minimum){
+	printf("\nThe median of the data set =\t%d",median);
+	printf("\nThe mean of the data set =\t%d",mean);
+	printf("\nThe maximum value of the data set =\t%d",maximum);
+	printf("\nThe minimum value of the data set =\t%d",minimum);
+}
 
