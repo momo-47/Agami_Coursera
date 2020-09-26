@@ -43,7 +43,7 @@ void print_statistics(int median, int mean, int maximum, int minimum);
  * @return <No value returned, but Values"mean, median, min, max" are printed >
  */
 
-void print_array(unsigned char *test[], int SIZE);
+void print_array(unsigned char test[], int size);
 
 /**
  * @brief <prints the dataset of an array and its size.>
@@ -51,13 +51,13 @@ void print_array(unsigned char *test[], int SIZE);
  * <This function takes the array and its size as inputs, and prints them on
  * in an ordered way on the screen>
  *
- * @param <unsigned char *test[]> <array that needs statistics>
- * @param <int SIZE> <size of the array>
+ * @param <unsigned char test[]> <array that needs statistics>
+ * @param <int size> <size of the array>
  *
  * @return <No value returned, but contents and size of array are printed >
  */
 
-int find_median (unsigned char *test[], int SIZE);
+int find_median (unsigned char test[], int size);
 
 /**
  * @brief <calculates the median of the given dataset>
@@ -65,13 +65,13 @@ int find_median (unsigned char *test[], int SIZE);
  * <This function takes the sorted array and its size as inputs, and finds
  * their median based on the size of the array>
  *
- * @param <unsigned char *test[]> <array that needs statistics>
- * @param <int SIZE> <size of the array>
+ * @param <unsigned char test[]> <array that needs statistics>
+ * @param <int size> <size of the array>
  *
  * @return <median of the array>
  */
 
-int find_mean (unsigned char *test[], int SIZE);
+int find_mean (unsigned char test[], int size);
 
 /**
  * @brief <calculates the mean of the given dataset>
@@ -79,14 +79,14 @@ int find_mean (unsigned char *test[], int SIZE);
  * <This function takes the array and its size as inputs, and finds
  * their mean by adding all of the array and deviding by its size >
  *
- * @param <unsigned char *test[]> <array that needs statistics>
- * @param <int SIZE> <size of the array>
+ * @param <unsigned char test[]> <array that needs statistics>
+ * @param <int size> <size of the array>
  *
  * @return <mean of the array>
  */
 
 
-int find_maximum (unsigned char *test[], int SIZE);
+int find_maximum (unsigned char test[], int size);
 
 /**
  * @brief <finds the maximum of the given dataset>
@@ -94,14 +94,14 @@ int find_maximum (unsigned char *test[], int SIZE);
  * <This function takes the array and its size as inputs, and finds
  * their maximum value through a for loop >
  *
- * @param <unsigned char *test[]> <array that needs statistics>
- * @param <int SIZE> <size of the array>
+ * @param <unsigned char test[]> <array that needs statistics>
+ * @param <int size> <size of the array>
  *
  * @return <max value in the array>
  */
 
 
-int find_minimum (unsigned char *test[], int SIZE);
+int find_minimum (unsigned char test[], int size);
 
 /**
  * @brief <finds the minimum of the given dataset>
@@ -109,14 +109,14 @@ int find_minimum (unsigned char *test[], int SIZE);
  * <This function takes the array and its size as inputs, and finds
  * their minimum value through a for loop >
  *
- * @param <unsigned char *test[]> <array that needs statistics>
- * @param <int SIZE> <size of the array>
+ * @param <unsigned char test[]> <array that needs statistics>
+ * @param <int size> <size of the array>
  *
  * @return <min value in the array>
  */
 
 
-void sort_array (unsigned char *test[], int SIZE);
+void sort_array (unsigned char test[], int size);
 
 /**
  * @brief <sorts the array from largest to smallest >
@@ -124,8 +124,8 @@ void sort_array (unsigned char *test[], int SIZE);
  * <This function takes the array and its size as inputs, and sorts them through
  * selections sorting >
  *
- * @param <unsigned char *test[]> <array that needs statistics>
- * @param <int SIZE> <size of the array>
+ * @param <unsigned char test[]> <array that needs statistics>
+ * @param <int size> <size of the array>
  *
  * @return <No value returned, but the array will be sorted descendingly>
  */
